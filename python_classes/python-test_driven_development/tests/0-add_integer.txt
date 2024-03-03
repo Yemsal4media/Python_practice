@@ -1,0 +1,83 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``add_integer`` from the ``0-add+integer`` module:
+
+Usage
+=====
+
+return sum of integers ,must be an int or float
+
+ >>> add_integer = __import__('0-add_integer').add_integer
+
+Base case
+>>> add_integer(5, 7)
+12
+
+float and integer
+>>> add_integer(4, 2.5)
+6
+
+default
+>>> add_integer(0)
+98
+
+negative and positive
+>>> add_integer(2, -3)
+-1
+
+two floats
+>>> add_integer(3.4, 3.2)
+6
+
+neg floats
+>>> add_integer(-3.4, -3.2)
+-6
+
+positive and neg
+>>> add_integer(-4, 2)
+2
+
+withou b
+>>> add_integer(3)
+101
+
+>>> add_integer(5.7, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+>>> add_integer(7, "string")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+  >>> add_integer("string", 6)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+ >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+ >>> add_integer("holberton", "school")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+>>> add_integer(float('nan'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+>>> add_integer(2, float('nan'))
+    Exception raised:
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
