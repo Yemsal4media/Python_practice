@@ -1,0 +1,5 @@
+The guessing games versus PC
+** User input the maximum number to be guessed by the computer
+** User input the maximum score to win the game: Who so ever reach the score first wins
+** if you maximum score is 5 or less, there is DEUCE at 4:4 but if the maximum score is higher there is DEUCE at 9:9
+ENJOY:
