@@ -4,6 +4,7 @@ from datetime import datetime
 
 current_datetime = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 current_datetime = str(current_datetime)
+theDateTime = str(current_datetime)
 '''
 key = Fernet.generate_key()
 fer = Fernet(key)
@@ -162,8 +163,7 @@ print("You are supposed to finish in ", Speed_time, "seconds, But You finished i
 
 def create_score():
     with open("score_board.txt", "a") as f:
-        f.write( Name + " | " + dificulty + " | " + fer.encrypt(str(question).encode()).decode() + " | " + fer.encrypt(str(score).encode()).decode() + " | " + fer.encrypt(str(total_time).encode()).decode() + " | " + current_datetime+"\n")
-
+        f.write( Name + " | " + dificulty + " | " + fer.encrypt(str(question).encode()).decode() + " | " + fer.encrypt(str(score).encode()).decode() + " | " + fer.encrypt(str(total_time).encode()).decode() + " | " + current_datetime +"\n")
 create_score()
 
 print()
@@ -175,8 +175,8 @@ def view_score():
     with open('score_board.txt', 'r') as f:
         for line in f.readlines():
             data = line.rstrip()
-            Name, dificulty, question, score, total_time, theTime = data.split("|")
-            print(Name + dificulty + "   " +  fer.decrypt(str(question).encode()).decode() +" questions" + "   " + fer.decrypt(str(score).encode()).decode() +" Points" + "   " +  fer.decrypt(str(total_time).encode()).decode() +"sec" + "   " + theTime)
+            Name, dificulty, question, score, total_time, theDateTime = data.split("|")
+            print(Name + "   " + dificulty + "   " +  fer.decrypt(str(question).encode()).decode() +" questions", "   " + fer.decrypt(str(score).encode()).decode() +" Points", "   " +  fer.decrypt(str(total_time).encode()).decode() +"sec", theDateTime)
 view_score()
 print()
 print()
