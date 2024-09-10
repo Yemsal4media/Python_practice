@@ -8,7 +8,7 @@ randtop = input('Type your upperbound number ')
 if randtop.isdigit():
     randtop = int(randtop)
 
-    if randtop <= 0:
+if randtop <= 0:
         print('Enter real number next time')
         quit()
 else:

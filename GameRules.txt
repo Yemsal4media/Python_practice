@@ -1,6 +1,0 @@
-This guessing games will be played against PC 
- ** You will input the maximum number to be guessed by the computer 
- ** You will also input the maximum score to win the game: Who so ever reach the score first wins 
- ** If you maximum score is 5 or less, there is DEUCE at 4:4 but if the maximum score is higher there is DEUCE at 9:9 
- ** You have nothing to worry about, there is no rigging in the game, The Computer is also guessing as you. Infact knowing the location of the number is added to your advantage.
- ENJOY:
